@@ -2581,6 +2581,80 @@ crop_params={'Barley': {'Aer': 15.0,
   'p_up2': 0.50,
   'p_up3': 0.50,
   'p_up4': 0.90},
-
-
   }
+
+crop_params['Rapeseed'] = {
+    'Aer'          : 5.0,      # Umbral de aireación — similar a la cebada, Xie et al. 2023 :contentReference[oaicite:0]{index=0}
+    'CCx'          : 0.95,     # Cobertura máxima observada en invierno, Xie et al. 2023 :contentReference[oaicite:1]{index=1}
+    'CDC'          : -9.0,     # Usaremos la forma en CD; el valor efectivo está en CDC_CD
+    'CDC_CD'       : 0.080,    # Coef. de decrecimiento del dosel (d-1), rango 0.07-0.09 en Aboodeh et al. 2024 :contentReference[oaicite:2]{index=2}
+    'CGC'          : -9.0,     
+    'CGC_CD'       : 0.120,    # Coef. de crecimiento del dosel (d-1), Xie et al. 2023 :contentReference[oaicite:3]{index=3}
+    'CalendarType' : 1,        # Días de calendario
+    'CropType'     : 3,        # Cultivo de grano-aceite
+    'Determinant'  : 1.0,      # Índice de cosecha fijo al terminar floración
+    'ETadj'        : 1.0,
+    'Emergence'    : -9.0,
+    'EmergenceCD'  : 8.0,      # 6-10 d en ensayos de INIA (siembras abril-mayo) :contentReference[oaicite:4]{index=4}
+    'Flowering'    : -9.0,
+    'FloweringCD'  : 25.0,     # Duración media de floración (3-4 sem.), INIA 2021 :contentReference[oaicite:5]{index=5}
+    'GDD_lo'       : 0,
+    'GDD_up'       : 10.0,     # Umbral superior 10 °C para invierno, Aboodeh et al. 2024 :contentReference[oaicite:6]{index=6}
+    'GDDmethod'    : 3,
+    'HI0'          : 0.30,     # Índice de cosecha inicial, promedio de Xie 2023 & Razzaghi 2024 
+    'HIstart'      : -9.0,
+    'HIstartCD'    : 70.0,     # Inicio de acumulación de HI tras floración, Xie 2023 :contentReference[oaicite:7]{index=7}
+    'Kcb'          : 1.10,     # Coef. basal pleno – coincide con rango 1.05-1.15 reportado :contentReference[oaicite:8]{index=8}
+    'Maturity'     : -9.0,
+    'MaturityCD'   : 140.0,    # De siembra a madurez fisiológica (≈ 5 m s-¹), INASE/INIA 2023 :contentReference[oaicite:9]{index=9}
+    'MaxRooting'   : -9.0,
+    'MaxRootingCD' : 60.0,     # Raíz llega a 1.5 m ~60 d después de emergencia, Xie 2023 :contentReference[oaicite:10]{index=10}
+    'Name'         : 'Rapeseed',
+    'PlantMethod'  : 1.0,      # Siembra directa
+    'PlantPop'     : 300000.0, # 25-40 pl m-2 = 250-400 k ha-1, óptimo local :contentReference[oaicite:11]{index=11}
+    'PolColdStress': 1,
+    'PolHeatStress': 1,
+    'SeedSize'     : 3.0,      # mg semilla-1 promedio de cultivares 2023 :contentReference[oaicite:12]{index=12}
+    'Senescence'   : -9.0,
+    'SenescenceCD' : 105.0,    # Duración llenado-senescencia, Xie 2023 :contentReference[oaicite:13]{index=13}
+    'SwitchGDD'    : 0,
+    'SxBotQ'       : 0.012,
+    'SxTopQ'       : 0.048,
+    'Tbase'        : 5.0,      # Tbase invernal, Razzaghi 2024 :contentReference[oaicite:14]{index=14}
+    'Tmax_lo'      : 45.0,
+    'Tmax_up'      : 40.0,
+    'Tmin_lo'      : 0.0,
+    'Tmin_up'      : 8.0,
+    'TrColdStress' : 1,
+    'Tupp'         : 26.0,     # Óptimo superior para transpiración, Aboodeh 2024 :contentReference[oaicite:15]{index=15}
+    'WP'           : 15.0,     # g m-2 mm-1 — rango 13-16 en AquaCrop para colza :contentReference[oaicite:16]{index=16}
+    'WPy'          : 100.0,
+    'YldForm'      : -9.0,
+    'YldFormCD'    : 60.0,     # Fase de formación de rendimiento ~2 meses, Xie 2023 :contentReference[oaicite:17]{index=17}
+    'YldWC'        : 90,
+    'Zmax'         : 1.5,      # Profundidad máxima de raíz, Xie 2023 :contentReference[oaicite:18]{index=18}
+    'Zmin'         : 0.3,
+    # Parámetros de plasticidad y estrés hídrico (p_up / p_lo) aproximados al patrón de girasol
+    'a_HI'         : 6.0,
+    'b_HI'         : 4.0,
+    'dHI0'         : 15.0,
+    'dHI_pre'      : 5.0,
+    'exc'          : 100.0,
+    'fage'         : 0.15,
+    'fshape_r'     : 1.5,
+    'fshape_w1'    : 3.0,
+    'fshape_w2'    : 3.0,
+    'fshape_w3'    : 3.0,
+    'fshape_w4'    : 1.0,
+    'fsink'        : 0.5,
+    'p_lo1'        : 0.60,
+    'p_lo2'        : 1.0,
+    'p_lo3'        : 1.0,
+    'p_lo4'        : 1.0,
+    'p_up1'        : 0.25,
+    'p_up2'        : 0.55,
+    'p_up3'        : 0.70,
+    'p_up4'        : 0.85
+}
+
+
